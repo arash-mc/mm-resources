@@ -1,0 +1,1 @@
+stage_name='complete_1_0';outer='Msat';inner='JJ';frame_range=[1,100];tile_size=[100,100];folder_name='sample_simulation';

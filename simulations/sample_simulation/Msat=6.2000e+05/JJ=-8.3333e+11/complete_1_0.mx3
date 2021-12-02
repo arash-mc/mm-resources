@@ -1,0 +1,23 @@
+SetMesh(400, 100, 1, 1e-09, 1e-09, 1e-09, 0, 0, 0);
+alpha = 0.3;
+xi = 0.3;
+Aex = 15e-12;
+Ku1 = 8e5;
+Dind = 3.5e-3;
+Msat = 6.2000e+05;
+JJ:=-1.4000e+12;
+b_ext = vector(0,0,0);
+m = neelskyrmion(1, -1).transl(-170e-9, 0, 0);
+anisU = vector(0, 0, 1);
+tableAdd(E_anis);
+tableAdd(E_total);
+tableAdd(E_exch);
+tableAdd(E_Zeeman);
+tableAdd(E_demag);
+tableAdd(E_therm);
+tableautosave(1e-12);
+Pol =1;
+autosnapshot(m , 5e-11);
+j = vector(JJ, 0 , 0)
+relax();
+run(5e-9);
